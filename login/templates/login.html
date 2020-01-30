@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>Signin Template for Bootstrap</title>
+    <link rel="stylesheet"  href="{{url_for('static', filename = 'css/bootstrap.css')}}">
+    <script type="text/javascript" href="{{url_for('static', filename ='jquery/jquery-3.4.1.min.js')}}" charset="UTF-8"></script>
+    <script type="text/javascript" href="{{url_for('static', filename = 'js/bootstrap.js')}}"></script>
+
+    
+
+  </head>
+
+  <body style=" background:url(../static/images/bg1.jpg) no-repeat center center fixed; background-size: cover;">
+
+    <div class="container">
+
+    <div class="col-md-4 col-xs-2"></div>
+
+    <div class="col-md-4 col-xs-8" style="background-color: rgba(255, 255, 255, 0.473); margin-top: 10%;border-radius: 15px">
+      <form action="" method="post" class="form-signin" style="padding: 10%;">
+        <h2 class="form-signin-heading"><i>Welcome to WIE</i></h2>
+        
+        账号：<input type="text" name="account"></br>
+    
+        密码：<input type="password" name="password"></br>
+  
+        <input type="submit" value="提交">
+    
+
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me">记住我
+          </label>
+           <label>
+            <a href="#">忘记密码</a>
+          </label>
+          <label>
+                <a href="#">立刻注册</a>
+              </label>
+        </div>
+ 
+      
+      </form>
+    </div>
+
+
+      <div class="col-md-4 col-xs-2"></div>
+    </div> <!-- /container -->
+
+
+  </body>
+</html>

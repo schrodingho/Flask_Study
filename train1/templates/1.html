@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>flask train</h1>
+<p>hello world!</p>
+<br>
+{{ url_str }}<br>
+{{ my_list[2] }}<br>
+{{ my_dict['url'] }}<br>
+
+<hr>
+
+{# 控制代码块 #}
+{% for num in my_list %}
+    {% if num>2 %}
+        {{ num }}<br>
+    {% endif %}
+{% endfor %}
+
+<hr>
+
+{# 过滤器使用 #}
+
+<p>{{ 'hello' | capitalize }}</p>
+{# 大写 #}
+<p>{{ url_str | upper }}</p>
+{# 反转 #}
+<p>{{ url_str | reverse }}</p>
+{# 列表操作 #}
+<p>{{ my_list | first }}</p>
+<p>{{ my_list | sort }}</p>
+<p>{{ my_list | sum }}</p>
+
+{# 链式调用 #}
+<p>{{ url_str | reverse | upper }}</p>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<ul>
+    {% for d in data %}
+        <li>
+            <h1>{{ d.title }}</h1>
+            <h2>{{ d.times|ht('%Y*%m*%d %H:%M:%S') }}</h2>
+            <h2>{{ d.content }}</h2>
+        </li>
+        <hr>
+        <br>
+    {% endfor %}
+
+
+</ul>
+
+</body>
+</html>

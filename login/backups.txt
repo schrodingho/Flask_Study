@@ -1,0 +1,26 @@
+
+from flask import Flask,render_template,request,redirect,url_for
+import time
+from datetime import datetime
+#创建flask对象
+#__name__代表当前文件所在位置
+app = Flask(__name__)
+#路由和视图
+@app.route('/article') #相当于Django url
+def article():
+    return render_template('more.html')
+
+@app.route('/',methods=['GET','POST'])
+@app.route('/login',methods=['GET','POST'])
+def login():
+    if request.method == 'GET':
+            return render_template('login1.html')
+    else:
+        account = request.form.get('account')
+        password = request.form.get('password')
+        if not account or not password: #账号或密码不能为空
+            return render_template('login1.html')
+        elif account !='123456' and password != '123456': #账号密码是123456
+            return '密码错误'
+        else:
+            return redirect(url_for('article'))
